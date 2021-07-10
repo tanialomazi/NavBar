@@ -1,0 +1,121 @@
+﻿body
+{font-family: Calibri;
+}
+
+/*deixa tudo sem margens externas e internas*/
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    box-shadow: rgb(0, 0, 0, 0.1) 0 5px 10px;
+}
+
+.nav-box {
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+}
+
+.logo {
+    height: 40px;
+}
+
+.bt {
+    display: none;
+    background-color: transparent;
+    color: #a349a4;
+    border: none;
+    font-size: 1.5em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.bt:hover {
+    transform: rotate(90deg);
+}
+
+.links-box li {
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+    overflow: hidden;
+    height: 0;
+}
+
+
+.links-box a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 7px;
+    color: violet;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+
+    .links-box a:hover {
+        color: white;
+        background-color: violet;
+    }
+
+.icons-box li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.icons-box a {
+    color: blue;
+}
+
+/*a partir daqui são os dados para telas responsivas*/
+@media screen and (max-width: 800px) {
+    .nav-box {
+        height: auto;
+        display: inline-block;
+    }
+
+    .logo-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 430px;
+    }
+
+    .links-box {
+        height: auto;
+        display: block;
+    }
+
+    .links-box a{
+        display: none;
+    }
+
+    .links-box li{
+        margin: 0;
+    }
+
+    .show-links-box a {
+        display: block;
+        padding: 0.5em 1.1em;
+        margin: 0 0.5em;
+    }
+
+    .show-links-box a:hover { 
+        background: violet;
+    }
+
+    .icons-box {
+        display: none;
+    }
+
+    .bt {
+        display: inline;
+    }
+}
